@@ -38,4 +38,7 @@ def isPerfectPower(x):
 
 
 
-print(isPerfectPower(25))
+
+if __name__ == "__main__":
+    print(isPerfectPower(25))
+    print(type(isPerfectPower(25)) == PerfectPower)
