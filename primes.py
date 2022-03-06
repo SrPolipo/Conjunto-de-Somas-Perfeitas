@@ -7,6 +7,11 @@ primeset = fastload("primeset")
 maxprime = primelist[-1]
 
 def isPrime(n,primeset=primeset,maxprime=maxprime):
+    """
+    Checks if a number is prime by seeing if
+    it's in the set of primes.
+    If it's not then it calls newprimes.
+    """
     if n > maxprime:
         newprimes(isqrt(n)+1,True)
     if n in primeset:
@@ -14,12 +19,19 @@ def isPrime(n,primeset=primeset,maxprime=maxprime):
     return False
 
 def isPrimeSlow(n,usedprimes):
+    """
+    Checks if a number is prime by seeing if
+    it's divisible by any prime number.
+    """
     for prime in usedprimes:
         if n%prime == 0:
             return False
     return True
 
 def newprimes(root, i=False):
+    """
+    Adds a new primes to the list/set/dictionary
+    """
     global primeset
     global primelist
     global rootdict

@@ -18,6 +18,7 @@ def fastload(path):
 
 
 if __name__ == "__main__":
-    print(fastload("primelist"))
-    print(fastload("primeset"))
-    print(fastload("rootdict"))
+    print(primelist:=fastload("primelist"))
+    print(primeset:=fastload("primeset"))
+    print(rootdict:=fastload("rootdict"))
+    print(primelist[rootdict[77]])
